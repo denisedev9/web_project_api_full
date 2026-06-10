@@ -1,0 +1,121 @@
+.form{
+margin: 60px auto;
+display: flex;
+flex-direction: column;
+width: 430px;
+height: 330px;
+border-radius: 10px;
+opacity: 0px;
+background-color: white;
+font-family: Inter, sans-serif;
+position: relative;
+}
+
+.form__box{
+  margin-top: 10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__input{
+    color: rgba(196, 196, 196, 1);
+    border: none; 
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    margin-top: 5px; 
+    margin-bottom: 10px;  
+    width: 358px;
+    height: 40px;
+}
+
+.form__input_type_error{
+    border-color: red;
+}
+
+.form__input-error{
+    color: red;
+    font-size: 8px;
+    font-weight: 400;
+    opacity: 1;
+}
+
+.form__input-error_visible{
+    opacity: 1;
+}
+
+.form__title{
+    color: black;
+    font-family: Inter-black, sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 29.05px;
+    text-align: left;
+    padding-left: 36px;
+}
+
+.form__fieldset{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    max-width: 358px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 17px;
+    padding-left: 36px; 
+    padding-right: 36px;
+}
+
+ 
+.submit__button{ 
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: Inter, sans-serif;
+width: 358px;
+height: 50.15px;
+color: white;
+background-color: black;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.78px;
+gap: 0px;
+border-radius: 2px 0px 0px 0px;
+cursor: pointer;
+border: 1px solid;
+border-color: rgba(196, 196, 196, 1);
+} 
+
+.submit__button:hover{
+    background-color: black;
+    opacity: 80%;
+    color: white;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 1);
+}
+
+.button_inactive{
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 680px) {
+
+    .form{
+        width: 300px;
+}
+
+    .form__fieldset{
+        max-width: 280px;
+}
+    .form__input{
+        width: 280px;
+    }
+
+    .submit__button{
+        width: 280px;
+    }
+}
+

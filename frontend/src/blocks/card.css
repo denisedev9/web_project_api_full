@@ -1,0 +1,198 @@
+/* CARD */
+.card {
+    position: relative;
+    width: 282px;
+    height: 340px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.cards__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 282px);
+    /* tantas columnas como quepan */
+    gap: 20px;
+    justify-content: center;
+    /* centra las columnas horizontalmente */
+    list-style: none;
+    /* quita los puntos */
+    padding: 0;
+    margin: 100px 30px;
+}
+
+/* IMAGEN */
+.card__image {
+    width: 100%;
+    height: 282px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+
+/* DESCRIPCIÓN */
+.card__description {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: white;
+    height: 58px;
+}
+
+/* TÍTULO */
+.card__title {
+    font-family: "Inter", sans-serif;
+    color: black;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 29px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 200px;
+}
+
+/* BOTÓN LIKE */
+.card__like-button {
+    width: 21px;
+    height: 19px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* ICONO LIKE */
+.card__like-button img {
+    width: 21px;
+    height: 19px;
+}
+
+/* BOTÓN DELETE */
+.card__delete-button {
+    width: 18px;
+    height: 18px;
+    border: none;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* ICONO DELETE */
+.card__delete-button img {
+    width: 18px;
+    height: 18px;
+}
+
+
+/*
+.card{
+    display: block;
+    position: relative;
+    width: 282px;
+    height: 340px;
+    border-radius: 10px;
+    background-color: white;
+    list-style: none;
+}
+
+.card__image{
+width: 100%;
+height: 282px;
+object-fit: cover;
+border-radius: 10px 10px 0 0;
+}
+
+.card__title{
+font-family: "Inter", sans-serif;
+color: black;
+font-size: 24px;
+font-weight: 900;
+line-height: 29.05px;
+text-align: left;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+max-width: 240px;
+}
+
+.card__description{
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+}
+
+
+
+.card__button{
+    width: 21px; 
+    height: 19px;
+background-color: transparent;
+background-image: url("../../images/heart.svg"); 
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+border: none;
+padding: 0;
+margin: 0;
+}
+
+.card__button_like{
+    background-image: url("../../images/heartblack.svg");
+}
+
+.card__button_like:hover{
+opacity: 50%;
+}
+
+
+.card__counter{
+    margin-top: 20px;
+    font-size: 10px;
+}
+
+.button__delete{
+    width: 20px;
+    height: 20px;
+    border: none;
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 20px; 
+    background-color: transparent;
+}
+
+
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    4 columnas 
+    grid-template-rows: repeat(3, 200px);
+    3 filas 
+    gap: 10px;
+    espaciado entre celdas
+    justify-content: center;
+    centrar el grid horizontalmente
+    margin: 20px auto;
+    /
+}
+
+.grid__item {
+    background-color: aqua;
+    align-content: center;
+    text-align: center;
+}
+
+.grid__rowspan {
+    grid-row: span 3;
+    grid-column: span 2;
+}
+        */

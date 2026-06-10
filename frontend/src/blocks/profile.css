@@ -1,0 +1,166 @@
+.profile{
+    margin: auto;
+max-width: 880px;
+width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.profile__image{  
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.profile__image_edit:hover{
+    position: relative;
+  &::after{
+    content:url("../../images/edit_pencil.svg"); /* */ 
+    position:absolute; /*or absolute*/
+    z-index:100000; /*a number that's more than the modal box*/
+    left:0px;
+    top:0px;
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+} 
+
+.profile__name{
+    flex-direction: column;
+    font-size: 42px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 48px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 18px;
+}
+
+.profile__border-box{
+    margin-top: 40px; 
+    display: flex;
+    flex-basis: 70%;
+    flex-direction: column;
+}
+
+.profile__container{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile__about{
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.edit__button{
+    align-self: center;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    border-color: white;
+}
+
+.edit__button:hover{
+    align-self: center;
+    background-color: transparent;
+    opacity: 60%;
+    width: 24px;
+    height: 24px;
+    border-color: white;
+}
+
+.add__button{
+    background-color: transparent;
+    width: 150px;
+    height: 50px;
+    border-color: white;
+}
+
+.add__button:hover{
+    background-color: transparent;
+    opacity: 60%;
+    height: 50px;
+    border-color: white;
+}
+
+
+ @media screen and (max-width: 680px) {
+
+
+.profile__border-box{
+    margin: 10px; 
+}
+
+    .profile {
+        margin: 0px;
+        padding-top: 42px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } 
+
+    .profile__name{
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+    line-height: 26.63px;
+    text-align: center;
+    }
+
+    .profile__about{
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        margin-top: 0px;
+        margin-left: 20px;
+    }
+
+.profile__container{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .profile__about {
+        padding-top: 10px;
+        max-width: 282px;
+    }
+
+.edit__button{
+    width: 18px;
+    height: 18px;
+    align-self: center;
+    background-color: transparent;
+    border-color: white;
+}
+
+.edit__button:hover{
+    background-color: transparent;
+    color: white;
+    align-self: center;
+    width: 18px;
+    height: 18px;
+}
+
+.add__button{
+width: 282px;
+height: 50px;
+}
+
+}
+
