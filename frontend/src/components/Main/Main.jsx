@@ -56,11 +56,9 @@ function Main({ onOpenPopup, onClosePopup, popup, cards, onCardLike, onCardDelet
         ))}
       </ul>
 
-      {popup && (
-        <Popup onClose={onClosePopup} title={popup.title}>
-          {popup.children}
-        </Popup>
-      )}
+      <Popup onClose={onClosePopup} title={popup?.title} isOpen={!!popup}>
+        {popup?.children}
+      </Popup>
     </main>
   );
 }

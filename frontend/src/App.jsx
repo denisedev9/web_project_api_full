@@ -51,7 +51,12 @@ function App() {
         .catch((err) => { console.log(err); });
 
       api.getInitialCards()
-        .then((data) => { setCards(data); })
+        .then((data) => {
+          setCards(data.map((card) => ({
+            ...card,
+            isLiked: card.likes.some((like) => like === currentUser._id || like._id === currentUser._id),
+          })));
+        })
         .catch((err) => { console.log(err); });
     }
   }, [isLoggedIn]);
@@ -128,7 +133,12 @@ function App() {
     likeMethod.call(api, card._id)
       .then((newCard) => {
         setCards((state) => state.map((currentCard) =>
-          currentCard._id === card._id ? newCard : currentCard
+          currentCard._id === card._id
+            ? {
+                ...newCard,
+                isLiked: newCard.likes.some((like) => like === currentUser._id || like._id === currentUser._id),
+              }
+            : currentCard
         ));
       })
       .catch((error) => console.error(error));
@@ -137,7 +147,7 @@ function App() {
   function handleAddPlaceSubmit(name, link) {
     api.createCard({ name, link })
       .then((newCard) => {
-        setCards([newCard, ...cards]);
+        setCards([{ ...newCard, isLiked: false }, ...cards]);
         handleClosePopup();
       })
       .catch((error) => console.error(error));
