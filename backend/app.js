@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const { login, createUser } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const errorHandler = require('./middlewares/error-handler');
@@ -9,6 +10,9 @@ const app = express();
 const PORT = 3000;
 
 mongoose.connect('mongodb+srv://admin:denise1@cluster0.45k7rwa.mongodb.net/aroundb?appName=Cluster0');
+
+app.use(cors());
+app.options('*', cors());
 
 app.use(express.json());
 

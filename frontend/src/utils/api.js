@@ -92,6 +92,6 @@ class Api {
   }
 }
 
-const api = new Api("http://localhost:3000");
+const api = new Api("https://arounddenise19.mooo.com");
 
 export default api;
